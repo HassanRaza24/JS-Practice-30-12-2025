@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="lists">
+        <li data-type="mobile">Samsung</li>
+        <li data-type="mobile">Vivo</li>
+        <li data-type="watch">Rado</li>
+        <li data-type="watch">Swiss</li>
+        <li data-type="laptop">Dell</li>
+        <li data-type="laptop">Lenovo</li>
+        <li data-type="laptop">Hp</li>
+    </ul>
+    <button id="btn1">All</button>
+    <button id="btn2">Mobile</button>
+    <button id="btn3">Laptop</button>
+    <button id="btn4">Watch</button>
+    <script>
+        let list = document.getElementById("lists")
+        let items = list.querySelectorAll("li")
+        let btn1 = document.getElementById("btn1")
+        let btn2 = document.getElementById("btn2")
+        let btn3 = document.getElementById("btn3")
+        let btn4 = document.getElementById("btn4")
+
+        btn1.addEventListener("click", () => {
+            // alert("all item")
+            items.forEach((item) => {
+                item.style.display = "block"
+            })
+        })
+
+        btn2.addEventListener("click", () => {
+            // alert("Mobile")
+            items.forEach((item) => {
+                if (item.dataset.type === "mobile") {
+                    item.style.display = "block"
+                } else {
+                    item.style.display = "none"
+                }
+            })
+        })
+        btn3.addEventListener("click", () => {
+            // alert("Laptop")
+            items.forEach((item) => {
+                if (item.dataset.type === "laptop") {
+                    item.style.display = "block"
+                } else {
+                    item.style.display = "none"
+                }
+            })
+        })
+        btn4.addEventListener("click", () => {
+            // alert("Watch")
+            items.forEach((item) => {
+                if (item.dataset.type === "watch") {
+                    item.style.display = "block"
+                } else {
+                    item.style.display = "none"
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
