@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="screen" type="text">
+    <ul id="list">
+        <li>Rameel</li>
+        <li>Samra</li>
+        <li>Laraib</li>
+        <li>Nabeel</li>
+        <li>Ali</li>
+        <li>Hassan</li>
+        <li>Ahmad</li>
+        <li>Ahad</li>
+        <li>Mohsin</li>
+        <li>Ahsan</li>
+        <li>Hiba</li>
+    </ul>
+    <script>
+        let display = document.getElementById("screen")
+        let list = document.getElementById("list")
+        let items = list.querySelectorAll("li")
+
+        display.addEventListener("input", ()=>{
+            let search = display.value.toLowerCase();
+            items.forEach((item) =>{
+                let names = item.innerText.toLowerCase()
+
+                if (names.includes(search)) {
+                    item.style.display = "block"; 
+                } else {
+                    item.style.display = "none"
+                }
+            })
+        })
+    </script>
+</body>
+</html>

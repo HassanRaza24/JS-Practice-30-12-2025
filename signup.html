@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="loginform">
+        <input type="text">
+        <input type="text">
+        <button>login</button>
+        <button id="signup">create an account / signup</button>
+    </form>
+    <form hidden id="signupform">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <button>signup</button>
+        <button id="login">already have an account</button>
+    </form>
+    <script>
+        let loginform = document.getElementById("loginform");
+        let signupform = document.getElementById("signupform");
+        let loginbtn = document.getElementById("login");
+        let signupbtn = document.getElementById("signup");
+
+        signupbtn.addEventListener("click", (e) => {
+            e.preventDefault()
+            loginform.hidden = true;
+            signupform.hidden = false;
+        })
+        loginbtn.addEventListener("click", (e) => {
+            e.preventDefault()
+            loginform.hidden = false;
+            signupform.hidden = true;
+        })
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- mare pas sirf 2.5 moths hain from 1 january 2026 to 15 march 2026 mern pori sikhni hai react basic ata hai component
+,usestate, why react use, jsx, props, basic chezain ati hai
+express ,node, mongodb kuch bhi ni ata to ma roz 6 hour doin ga daily or weekly and monthly projects ke sath take achi
+samjh a jaye kaise karon project kya youtube se dekh kae banao ya weekly wale youtube se banao or daily or monthly wale
+khud kya kahte ho koi acha sa roadmap do take ma full stack developer ban sakoin 2.5 montho fir 16 march 2026 se onwards
+jobs ya internship dhondhna shuru karo or 1 month ke andar job mil jaye or mare project bohat strong hoin like jo
+monthly wale hoin wo aik ecommerce full stack ho or aik saas ya ho portfolio ho is type ke ho taky jali hi internship ya
+job mil jaye job nahi to internship paid ho -->

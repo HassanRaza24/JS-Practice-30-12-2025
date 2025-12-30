@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="screen" type="text">
+    <button id="btns" >add</button>
+    <ul id="order"> 
+         //<li></li> 
+    </ul>
+    <script>
+        let display = document.getElementById("screen")
+        let btn = document.getElementById("btns")
+        let unorder = document.getElementById("order")
+        btn.addEventListener("click", ()=>{
+            let li = document.createElement("li")
+            li.textContent = display.value 
+            unorder.appendChild(li)
+        })
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="screen" type="text">
+    <button id="btns" >search</button>
+    <script>
+        let btn = document.getElementById("btns")
+        let display = document.getElementById("screen")
+        btn.addEventListener("click", (e)=>{
+            if (display.value === "hassan") {
+                alert("my name is hassan raza")
+            } else {
+                alert("match not found")
+            }
+        })
+    </script>
+</body>
+</html>

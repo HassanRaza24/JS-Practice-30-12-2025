@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="screen" type="text">
+    <ul id="list">
+        <li>hassan</li>
+        <li>raza</li>
+        <li>ahmad</li>
+    </ul>
+    <script>
+        let display = document.getElementById("screen")
+        let list = document.getElementById("list")
+        let items = list.querySelectorAll("li")
+
+        display.addEventListener("input", () =>{
+            let searchText = display.value.toLowerCase(); // is ue to store the value written in input
+
+            items.forEach((item) => {
+                let itemText = item.innerText.toLowerCase(); // is use to take the list item only name not the whole tag
+                console.log(itemText)
+                
+                if (itemText.includes(searchText)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice calculator, Todo-list, Form Validation</title>
+</head>
+
+<body>
+    <input id="screen" type="text" disabled>
+    <div class="btn">
+        <button>7</button>
+        <button>+</button>
+        <button>8</button>
+        <button>=</button>
+    </div>
+    <script>
+        let display = document.getElementById("screen")
+        let btn = document.querySelectorAll(".btn button")
+        btn.forEach( (bt) => {
+            console.log(bt.innerHTML)
+            bt.addEventListener( "click", ()=>{
+                // display.value += bt.innerHTML
+                let value = bt.innerHTML
+                if (value === "=") {
+                   let a = display.value = eval(display.value)
+                   console.log(a)
+                } else {
+                    display.value += value
+                }
+            } )
+        } )
+    </script>
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginform">
+        <input type="text">
+        <input type="text">
+        <button>login</button>
+        <button id="newuser">create new account</button>
+    </form>
+
+    <form hidden id="signupform">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <button>signup</button>
+        <button id="old">already have account</button>
+    </form>
+    <script>
+        let newac = document.getElementById("newuser")
+        let havac = document.getElementById("old")
+        let login = document.getElementById("loginform")
+        let signup = document.getElementById("signupform")
+        // console.log(signup)
+
+        newac.addEventListener("click", (e)=>{
+            e.preventDefault()
+            login.hidden = true
+            signup.hidden = false
+        })
+        havac.addEventListener("click", (e)=>{
+            e.preventDefault()
+            login.hidden = false 
+            signup.hidden = true 
+        })
+
+    </script>
+</body>
+</html> -->
